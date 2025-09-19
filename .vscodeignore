@@ -7,5 +7,7 @@ vsc-extension-quickstart.md
 **/.eslint.json
 **/*.map
 **/*.ts
+HowToBuild.md
 # Don't exclude these:
 # !images/**
+# !README.md
