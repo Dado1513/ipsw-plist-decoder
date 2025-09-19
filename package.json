@@ -1,0 +1,63 @@
+{
+  "name": "ipsw-plist-decoder",
+  "displayName": "IPSW Plist Decoder",
+  "description": "Decode plist files using ipsw tool for mobile penetration testing",
+  "version": "0.0.1",
+  "publisher": "dado1513",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dado1513/ipsw-plist-decoder"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ipsw-plist-decoder.decodePlist",
+        "title": "Decode Plist with IPSW",
+        "category": "IPSW"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "ipsw-plist-decoder.decodePlist",
+          "when": "resourceExtname == .plist",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "ipsw-plist-decoder.decodePlist",
+          "when": "resourceExtname == .plist",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "IPSW Plist Decoder",
+      "properties": {
+        "ipsw-plist-decoder.ipswPath": {
+          "type": "string",
+          "default": "ipsw",
+          "description": "Path to the ipsw executable"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  }
+}
