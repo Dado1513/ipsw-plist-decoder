@@ -2,7 +2,7 @@
   "name": "ipsw-plist-decoder",
   "displayName": "IPSW Plist Decoder",
   "description": "Decode plist files using ipsw tool for mobile penetration testing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "dado1513",
   "repository": {
     "type": "git",
@@ -15,6 +15,8 @@
     "Other"
   ],
   "main": "./out/extension.js",
+  "icon": "images/plist_decode_icon.png",
+
   "contributes": {
     "commands": [
       {
